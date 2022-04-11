@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		742656552804193C0087CE86 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742656542804193C0087CE86 /* SettingViewController.swift */; };
 		74E910EB2803F73D005837CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E910EA2803F73D005837CD /* AppDelegate.swift */; };
 		74E910ED2803F73D005837CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E910EC2803F73D005837CD /* SceneDelegate.swift */; };
 		74E910EF2803F73D005837CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E910EE2803F73D005837CD /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		742656542804193C0087CE86 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		74E910E72803F73D005837CD /* LEDBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEDBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E910EA2803F73D005837CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74E910EC2803F73D005837CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				74E910F32803F73D005837CD /* Assets.xcassets */,
 				74E910F52803F73D005837CD /* LaunchScreen.storyboard */,
 				74E910F82803F73D005837CD /* Info.plist */,
+				742656542804193C0087CE86 /* SettingViewController.swift */,
 			);
 			path = LEDBoard;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				74E910EF2803F73D005837CD /* ViewController.swift in Sources */,
 				74E910EB2803F73D005837CD /* AppDelegate.swift in Sources */,
 				74E910ED2803F73D005837CD /* SceneDelegate.swift in Sources */,
+				742656552804193C0087CE86 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +298,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,6 +326,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
