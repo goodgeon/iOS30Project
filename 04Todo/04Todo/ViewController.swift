@@ -9,14 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var editButton: UIBarButtonItem!
+    var doneButton : UIBarButtonItem?
+    
     var tasks = [Task]() {
         didSet {
+            print("tasks didSet")
             saveTasks()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tapDoneButton))
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -45,6 +50,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
+        guard !self.tasks.isEmpty else { return }
+        self.navigationItem.leftBarButtonItem = doneButton
+        self.tableView.setEditing(true, animated: true)
     }
     
     func saveTasks() {
@@ -71,6 +79,12 @@ class ViewController: UIViewController {
             return Task(title: title, done: done)
         }
     }
+    
+    @objc
+    func tapDoneButton() {
+        self.navigationItem.leftBarButtonItem = editButton
+        self.tableView.setEditing(false, animated: true)
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -90,6 +104,26 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        tasks.remove(at: indexPath.row)
+        print("[indexPath]: \([indexPath])")
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+        if tasks.isEmpty {
+            self.tapDoneButton()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let task = tasks[sourceIndexPath.row]
+        tasks.remove(at: sourceIndexPath.row)
+        tasks.insert(task, at: destinationIndexPath.row)
     }
 }
 
