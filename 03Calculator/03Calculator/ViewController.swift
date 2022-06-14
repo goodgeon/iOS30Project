@@ -101,18 +101,15 @@ class ViewController: UIViewController {
                 }
                 
                 self.firstOperand = result
-                currentOperation = .unknown
                 numberOutputLabel.text = result
                 return
             }
             
             currentOperation = operation
         } else {
-            if !displayNumber.isEmpty {
-                firstOperand = displayNumber
-                currentOperation = operation
-                displayNumber = ""
-            }
+            firstOperand = displayNumber
+            currentOperation = operation
+            displayNumber = ""
             
         }
     }
