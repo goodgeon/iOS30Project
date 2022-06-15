@@ -305,7 +305,7 @@
         <!--일기 작성-->
         <scene sceneID="Ejo-WT-bL2">
             <objects>
-                <viewController id="smP-Iw-6rn" customClass="WriteDiaryViewController" customModule="_5Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteDiaryViewController" id="smP-Iw-6rn" customClass="WriteDiaryViewController" customModule="_5Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xs7-9N-aja">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

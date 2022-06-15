@@ -41,11 +41,32 @@ class DiaryDetailViewController: UIViewController {
     }
     
     @IBAction func tapEditButton(_ sender: UIButton) {
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "WriteDiaryViewController") as? WriteDiaryViewController else { return }
+        guard let indexPath = self.indexPath else { return }
+        guard let diary = self.diary else { return }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(editDiaryNotification(_:)), name: Notification.Name("editDiary"), object: nil)
+        viewController.diaryEditMode = .edit(indexPath, diary)
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc
+    private func editDiaryNotification(_ notification: Notification) {
+        guard let diary = notification.object as? Diary else { return }
+        guard let row = notification.userInfo?["indexPath.row"] as? Int else { return }
+        
+        self.diary = diary
+        self.configureView()
     }
     
     @IBAction func tapDeleteButton(_ sender: UIButton) {
         guard let indexPath = self.indexPath else { return }
         self.delegate?.didSelectDelete(indexPath: indexPath)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
