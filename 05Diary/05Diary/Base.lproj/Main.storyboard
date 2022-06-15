@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--일기장-->
         <scene sceneID="QXW-eM-cbV">
             <objects>
                 <navigationController id="7q8-Kv-ql0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Ivo-mT-4eD"/>
+                    <tabBarItem key="tabBarItem" title="일기장" image="folder" catalog="system" selectedImage="folder.fill" id="Ivo-mT-4eD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GZH-lW-DdZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="851" y="-143"/>
         </scene>
-        <!--Item-->
+        <!--즐겨찾기-->
         <scene sceneID="iZo-tX-Epu">
             <objects>
                 <navigationController id="Jim-WT-hfH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="toQ-gp-EZG"/>
+                    <tabBarItem key="tabBarItem" title="즐겨찾기" image="star" catalog="system" selectedImage="star.fill" id="toQ-gp-EZG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jgT-w8-vMa">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -93,6 +93,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="80"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="9AF-Oq-4nN" id="xxu-gp-ANP"/>
+                                            <outlet property="titleLabel" destination="0qU-eZ-1ss" id="SOe-rk-Orm"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -107,6 +111,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O4i-lC-Hjx"/>
+                    <connections>
+                        <outlet property="collectionView" destination="iQk-9z-DvR" id="FmU-uJ-93C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfC-e1-Djv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -410,6 +417,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="folder" catalog="system" width="128" height="97"/>
+        <image name="folder.fill" catalog="system" width="128" height="97"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
