@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VJu-2c-vpF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VJu-2c-vpF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -12,7 +12,6 @@
         <!--Item-->
         <scene sceneID="QXW-eM-cbV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XAc-He-W89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="7q8-Kv-ql0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Ivo-mT-4eD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GZH-lW-DdZ">
@@ -23,6 +22,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4zU-hb-OQU"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAc-He-W89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="851" y="-143"/>
         </scene>
@@ -259,6 +259,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="yMy-Lu-gfV" id="mrb-jR-Bep"/>
+                                            <outlet property="titleLabel" destination="52L-Sa-va2" id="WNl-gI-ANT"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -279,6 +283,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="dh1-xo-D43" id="D0L-zU-31a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -328,7 +335,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2y1-mg-Tvj">
                                 <rect key="frame" x="24" y="393" width="366" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="date-time"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b5B-fR-tg1"/>
@@ -355,8 +362,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기 작성" id="uoG-gn-B9q">
-                        <barButtonItem key="rightBarButtonItem" title="등록" id="U3X-SJ-XAf"/>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="U3X-SJ-XAf">
+                            <connections>
+                                <action selector="tapConfirmButton:" destination="smP-Iw-6rn" id="kPl-5c-c6b"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmButton" destination="U3X-SJ-XAf" id="yPf-bd-xnA"/>
+                        <outlet property="contentsTextView" destination="g8O-FG-QRc" id="5jd-vF-nEW"/>
+                        <outlet property="dateTextField" destination="2y1-mg-Tvj" id="B67-zc-SXS"/>
+                        <outlet property="titleTextField" destination="v52-0L-Q6a" id="lIu-EK-gxE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgn-KW-9DV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
