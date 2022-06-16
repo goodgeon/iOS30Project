@@ -13,6 +13,8 @@
 		66C57F31285B68C30040A162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C57F2F285B68C30040A162 /* Main.storyboard */; };
 		66C57F33285B68C40040A162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C57F32285B68C40040A162 /* Assets.xcassets */; };
 		66C57F36285B68C40040A162 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C57F34285B68C40040A162 /* LaunchScreen.storyboard */; };
+		66C57F3E285B6B260040A162 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C57F3D285B6B260040A162 /* WeatherInformation.swift */; };
+		66C57F40285B73C00040A162 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C57F3F285B73BF0040A162 /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		66C57F32285B68C40040A162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66C57F35285B68C40040A162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66C57F37285B68C40040A162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66C57F3D285B6B260040A162 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
+		66C57F3F285B73BF0040A162 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				66C57F32285B68C40040A162 /* Assets.xcassets */,
 				66C57F34285B68C40040A162 /* LaunchScreen.storyboard */,
 				66C57F37285B68C40040A162 /* Info.plist */,
+				66C57F3D285B6B260040A162 /* WeatherInformation.swift */,
+				66C57F3F285B73BF0040A162 /* ErrorMessage.swift */,
 			);
 			path = 07Weather;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C57F2E285B68C30040A162 /* ViewController.swift in Sources */,
+				66C57F3E285B6B260040A162 /* WeatherInformation.swift in Sources */,
+				66C57F40285B73C00040A162 /* ErrorMessage.swift in Sources */,
 				66C57F2A285B68C30040A162 /* AppDelegate.swift in Sources */,
 				66C57F2C285B68C30040A162 /* SceneDelegate.swift in Sources */,
 			);

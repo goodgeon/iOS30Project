@@ -25,6 +25,9 @@
                                 <rect key="frame" x="166" y="132" width="82" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="날씨 가져오기"/>
+                                <connections>
+                                    <action selector="tapFetchWeatherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQZ-l9-ibb"/>
+                                </connections>
                             </button>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TbZ-SQ-bFI">
                                 <rect key="frame" x="24" y="212" width="366" height="142.5"/>
@@ -90,6 +93,15 @@
                             <constraint firstItem="kNI-6Z-aza" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="lXd-J2-Yv2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="uVP-sX-s5a" id="Pdx-Wz-xOx"/>
+                        <outlet property="cityNameTextField" destination="kNI-6Z-aza" id="mj8-8g-e1t"/>
+                        <outlet property="maxTempLabel" destination="jKl-kc-Yfu" id="asN-gF-QzF"/>
+                        <outlet property="minTempLabel" destination="kNI-6Z-aza" id="wSi-vF-PMF"/>
+                        <outlet property="tempLabel" destination="F1d-3R-IYY" id="cAS-93-3Jy"/>
+                        <outlet property="weatherDescriptionLabel" destination="X0S-gL-v1n" id="5Ep-8a-MLx"/>
+                        <outlet property="weatherStackView" destination="TbZ-SQ-bFI" id="wK9-ij-5Tl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
