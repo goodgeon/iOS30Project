@@ -14,6 +14,8 @@
 		742A97BB285C190700EC1E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742A97BA285C190700EC1E2C /* Assets.xcassets */; };
 		742A97BE285C190700EC1E2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 742A97BC285C190700EC1E2C /* LaunchScreen.storyboard */; };
 		74742512285C1B18008A65E0 /* CovidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74742511285C1B18008A65E0 /* CovidDetailViewController.swift */; };
+		74742514285C1D2B008A65E0 /* CityCovidOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74742513285C1D2B008A65E0 /* CityCovidOverview.swift */; };
+		74742516285C1E83008A65E0 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74742515285C1E83008A65E0 /* APIKey.swift */; };
 		CD9DB878A39539E9807F6ACB /* Pods_08Covid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5473DC7E4BA6FD964CBA1425 /* Pods_08Covid.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		742A97BD285C190700EC1E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		742A97BF285C190700EC1E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74742511285C1B18008A65E0 /* CovidDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDetailViewController.swift; sourceTree = "<group>"; };
+		74742513285C1D2B008A65E0 /* CityCovidOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCovidOverview.swift; sourceTree = "<group>"; };
+		74742515285C1E83008A65E0 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		9783835D878F25285CEB839F /* Pods-08Covid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-08Covid.debug.xcconfig"; path = "Target Support Files/Pods-08Covid/Pods-08Covid.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +85,8 @@
 				742A97BC285C190700EC1E2C /* LaunchScreen.storyboard */,
 				742A97BF285C190700EC1E2C /* Info.plist */,
 				74742511285C1B18008A65E0 /* CovidDetailViewController.swift */,
+				74742513285C1D2B008A65E0 /* CityCovidOverview.swift */,
+				74742515285C1E83008A65E0 /* APIKey.swift */,
 			);
 			path = 08Covid;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 				742A97B6285C190600EC1E2C /* ViewController.swift in Sources */,
 				74742512285C1B18008A65E0 /* CovidDetailViewController.swift in Sources */,
 				742A97B2285C190600EC1E2C /* AppDelegate.swift in Sources */,
+				74742514285C1D2B008A65E0 /* CityCovidOverview.swift in Sources */,
+				74742516285C1E83008A65E0 /* APIKey.swift in Sources */,
 				742A97B4285C190600EC1E2C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
