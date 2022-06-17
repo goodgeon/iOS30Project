@@ -60,7 +60,7 @@ class ViewController: UIViewController {
                 
                 guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data) else { return }
                 
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { //Network작업은 별도의 Thread에서 진행되고, response가 와도 자동으로 main thread로 돌아가지 않음
                     self?.weatherStackView.isHidden = false
                     self?.configureView(weatherInformation: weatherInformation)
                 }
