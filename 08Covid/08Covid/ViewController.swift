@@ -20,11 +20,68 @@ class ViewController: UIViewController {
         self.fetchCovidoverview(completionHandler: { result in
             switch result {
             case let .success(result):
+                self.configureStackView(koreaCovidOverview: result.korea)
+                let covidOverviewList = self.makeCovidOverviewList(cityCovidOverview: result)
+                self.configureChartView(covidOverviewList: covidOverviewList)
                 debugPrint("success \(result)")
             case let .failure(result):
                 debugPrint("error \(result)")
             }
         })
+    }
+    
+    private func configureStackView(koreaCovidOverview: CovidOverview) {
+        self.totalCaseLabel.text = "\(koreaCovidOverview.totalCase)명"
+        self.newCaseLabel.text = "\(koreaCovidOverview.newCase)명"
+    }
+    
+    private func makeCovidOverviewList(cityCovidOverview: CityCovidOverview) -> [CovidOverview] {
+        return [
+            cityCovidOverview.seoul,
+            cityCovidOverview.busan,
+            cityCovidOverview.daegu,
+            cityCovidOverview.incheon,
+            cityCovidOverview.gwangju,
+            cityCovidOverview.daejeon,
+            cityCovidOverview.ulsan,
+            cityCovidOverview.sejong,
+            cityCovidOverview.gyeonggi,
+            cityCovidOverview.chungbuk,
+            cityCovidOverview.chungnam,
+            cityCovidOverview.gyeongbuk,
+            cityCovidOverview.gyeongnam,
+            cityCovidOverview.jeju
+        ]
+    }
+    
+    private func configureChartView(covidOverviewList: [CovidOverview]) {
+        let entries = covidOverviewList.compactMap { [weak self] overview -> PieChartDataEntry? in
+            guard let self = self else { return nil }
+            return PieChartDataEntry(value: removeFormatString(string: overview.newCase), label: overview.countryName, data: overview)
+        }
+        let dataSet = PieChartDataSet(entries: entries, label: "코로나 발생 현황")
+        dataSet.sliceSpace = 1
+        dataSet.entryLabelColor = .black
+        dataSet.valueTextColor = .black
+        dataSet.colors = ChartColorTemplates.vordiplom()
+        + ChartColorTemplates.joyful()
+        + ChartColorTemplates.colorful()
+        + ChartColorTemplates.liberty()
+        + ChartColorTemplates.pastel()
+        dataSet.xValuePosition = .outsideSlice
+        dataSet.valueLinePart1Length = 0.2
+        dataSet.valueLinePart1OffsetPercentage = 0.8
+        dataSet.valueLinePart2Length = 0.2
+        
+        let data = PieChartData(dataSet: dataSet)
+        pieChartView.data = data
+        self.pieChartView.spin(duration: 0.3, fromAngle: self.pieChartView.rotationAngle, toAngle: self.pieChartView.rotationAngle + 80)
+    }
+    
+    private func removeFormatString(string: String) -> Double {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter.number(from: string)?.doubleValue ?? 0
     }
     
     private func fetchCovidoverview(
