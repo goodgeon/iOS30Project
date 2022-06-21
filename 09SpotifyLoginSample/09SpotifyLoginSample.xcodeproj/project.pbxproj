@@ -97,7 +97,6 @@
 				F18124CF5A6EEFA706B1E6E6 /* Pods-09SpotifyLoginSample.debug.xcconfig */,
 				98B067D781B4A47ADD87899C /* Pods-09SpotifyLoginSample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

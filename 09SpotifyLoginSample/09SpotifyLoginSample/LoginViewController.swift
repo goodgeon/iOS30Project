@@ -7,10 +7,13 @@
 
 import Foundation
 import UIKit
+import GoogleSignIn
+import FirebaseCore
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailLoginButton: UIButton!
-    @IBOutlet weak var googleLoginButton: UIButton!
+    @IBOutlet weak var googleLoginButton: GIDSignInButton!
     @IBOutlet weak var appleLoginButton: UIButton!
     
     override func viewDidLoad() {
@@ -26,7 +29,37 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        let config = GIDConfiguration(clientID: clientID)
+        
+        
+        
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self, callback: { [unowned self] user, error in
+            if let error = error {
+                print("ERROR Google Sign In \(error.localizedDescription)")
+            }
+            
+            guard let authentication = user?.authentication,
+                  let idToken = authentication.idToken
+            else {
+                return
+            }
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
+            
+            Auth.auth().signIn(with: credential, completion: { _, _ in
+                self.showMainViewController()
+            })
+        })
     }
+    
+    private func showMainViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+        viewController.modalPresentationStyle = .fullScreen
+        navigationController?.show(viewController, sender: nil)
+    }
+    
     @IBAction func appleLoginButtonTapped(_ sender: UIButton) {
     }
     
