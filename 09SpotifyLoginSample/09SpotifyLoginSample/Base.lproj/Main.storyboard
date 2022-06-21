@@ -233,7 +233,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ho3-2Q-dzp">
-                                <rect key="frame" x="175.5" y="483" width="63" height="34"/>
+                                <rect key="frame" x="175.5" y="533" width="63" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="로그아웃">
@@ -243,17 +243,31 @@
                                     <action selector="logoutButtonTapped:" destination="loj-ws-kg1" eventType="touchUpInside" id="JBu-26-gla"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPP-TI-Tcu">
+                                <rect key="frame" x="166" y="483" width="82" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="비밀번호 변경">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changePasswordButtonTapped:" destination="loj-ws-kg1" eventType="touchUpInside" id="sP3-Kx-dwk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Sp-TU-Fw3"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ho3-2Q-dzp" firstAttribute="top" secondItem="Bgs-Rg-qCG" secondAttribute="bottom" constant="20" id="293-Sn-XqX"/>
+                            <constraint firstItem="JPP-TI-Tcu" firstAttribute="top" secondItem="Bgs-Rg-qCG" secondAttribute="bottom" constant="20" id="4uv-vq-dCR"/>
                             <constraint firstItem="Bgs-Rg-qCG" firstAttribute="centerX" secondItem="ytM-dW-4Rj" secondAttribute="centerX" id="80k-sb-Wle"/>
                             <constraint firstItem="ho3-2Q-dzp" firstAttribute="centerX" secondItem="ytM-dW-4Rj" secondAttribute="centerX" id="R3k-VY-vpd"/>
                             <constraint firstItem="Bgs-Rg-qCG" firstAttribute="centerY" secondItem="ytM-dW-4Rj" secondAttribute="centerY" id="WM7-hn-hDx"/>
+                            <constraint firstItem="JPP-TI-Tcu" firstAttribute="centerX" secondItem="ytM-dW-4Rj" secondAttribute="centerX" id="gbK-fZ-xnS"/>
+                            <constraint firstItem="ho3-2Q-dzp" firstAttribute="top" secondItem="JPP-TI-Tcu" secondAttribute="bottom" constant="20" id="x2t-xW-ENb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resetPasswordButton" destination="JPP-TI-Tcu" id="3bS-ga-RF5"/>
                         <outlet property="welcomeLabel" destination="Bgs-Rg-qCG" id="fO2-Bb-JQb"/>
                     </connections>
                 </viewController>
