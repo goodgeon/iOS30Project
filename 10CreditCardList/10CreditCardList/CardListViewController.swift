@@ -64,9 +64,33 @@ class CardListViewController: UITableViewController {
         
         detailViewController.promotionDetail = creditCardList[indexPath.row].promotionDetail
         self.show(detailViewController, sender: nil)
+        
+        ref.queryOrdered(byChild: "id").queryEqual(toValue: creditCardList[indexPath.row].id).observe(.value, with: {[weak self] snapshot in
+            guard let self = self,
+                  let value = snapshot.value as? [String: [String: Any]],
+                  let key = value.keys.first else { return }
+            
+            self.ref.child("\(key)").child("isSelected").setValue(true)
+        })
     }
     
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            ref.queryOrdered(byChild: "id").queryEqual(toValue: creditCardList[indexPath.row].id).observe(.value, with: {[weak self] snapshot in
+                guard let self = self,
+                      let value = snapshot.value as? [String: [String: Any]],
+                      let key = value.keys.first else { return }
+                
+                self.ref.child(key).removeValue()
+            })
+        }
     }
 }

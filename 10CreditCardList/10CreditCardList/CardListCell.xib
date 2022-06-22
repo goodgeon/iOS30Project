@@ -50,6 +50,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="M4g-Tv-d7z" firstAttribute="leading" secondItem="zud-Xk-kkM" secondAttribute="leading" constant="37.5" id="ctW-qz-D1t"/>
+                                        </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신용카드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NK-JV-B5w">
                                         <rect key="frame" x="0.0" y="23" width="66" height="23"/>
