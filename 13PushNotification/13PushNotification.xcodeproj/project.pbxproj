@@ -14,7 +14,7 @@
 		66EAA0882869F1240059368F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66EAA0862869F1240059368F /* Main.storyboard */; };
 		66EAA08A2869F1270059368F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EAA0892869F1270059368F /* Assets.xcassets */; };
 		66EAA08D2869F1270059368F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66EAA08B2869F1270059368F /* LaunchScreen.storyboard */; };
-		66EAA0952869F21E0059368F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66EAA0942869F21E0059368F /* GoogleService-Info.plist */; };
+		741D0BD0286BE46E0007132A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 741D0BCF286BE46E0007132A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		66EAA0892869F1270059368F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66EAA08C2869F1270059368F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66EAA08E2869F1270059368F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66EAA0942869F21E0059368F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		741D0BCF286BE46E0007132A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A633B075526349B2C6E4B058 /* Pods-13PushNotification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-13PushNotification.debug.xcconfig"; path = "Target Support Files/Pods-13PushNotification/Pods-13PushNotification.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +91,7 @@
 				66EAA0892869F1270059368F /* Assets.xcassets */,
 				66EAA08B2869F1270059368F /* LaunchScreen.storyboard */,
 				66EAA08E2869F1270059368F /* Info.plist */,
-				66EAA0942869F21E0059368F /* GoogleService-Info.plist */,
+				741D0BCF286BE46E0007132A /* GoogleService-Info.plist */,
 			);
 			path = 13PushNotification;
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66EAA08D2869F1270059368F /* LaunchScreen.storyboard in Resources */,
-				66EAA0952869F21E0059368F /* GoogleService-Info.plist in Resources */,
+				741D0BD0286BE46E0007132A /* GoogleService-Info.plist in Resources */,
 				66EAA08A2869F1270059368F /* Assets.xcassets in Resources */,
 				66EAA0882869F1240059368F /* Main.storyboard in Resources */,
 			);
