@@ -16,6 +16,8 @@
 		66657D4228717D4400B7BDA9 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66657D4128717D4400B7BDA9 /* Content.swift */; };
 		66657D442871D10000B7BDA9 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66657D432871D10000B7BDA9 /* ContentCollectionViewCell.swift */; };
 		66657D462871D31900B7BDA9 /* ContentCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66657D452871D31900B7BDA9 /* ContentCollectionViewHeader.swift */; };
+		668F848E2875CB520056D03D /* ContentCollectionViewRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668F848D2875CB520056D03D /* ContentCollectionViewRankCell.swift */; };
+		668F84902875D2710056D03D /* ContentCollectionViewMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668F848F2875D2710056D03D /* ContentCollectionViewMainCell.swift */; };
 		7DCD4CF4094383356F2FD96A /* Pods_14NetflixStyleSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB1D7ACF1B4B9219CB1CCB10 /* Pods_14NetflixStyleSampleApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		66657D4128717D4400B7BDA9 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		66657D432871D10000B7BDA9 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		66657D452871D31900B7BDA9 /* ContentCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewHeader.swift; sourceTree = "<group>"; };
+		668F848D2875CB520056D03D /* ContentCollectionViewRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewRankCell.swift; sourceTree = "<group>"; };
+		668F848F2875D2710056D03D /* ContentCollectionViewMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewMainCell.swift; sourceTree = "<group>"; };
 		BE59416AD642D50AE5F35087 /* Pods-14NetflixStyleSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-14NetflixStyleSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-14NetflixStyleSampleApp/Pods-14NetflixStyleSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DB1D7ACF1B4B9219CB1CCB10 /* Pods_14NetflixStyleSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_14NetflixStyleSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -54,7 +58,6 @@
 				BE59416AD642D50AE5F35087 /* Pods-14NetflixStyleSampleApp.debug.xcconfig */,
 				4FD8599DFF1FD080246D14B1 /* Pods-14NetflixStyleSampleApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -89,6 +92,8 @@
 				66657D4128717D4400B7BDA9 /* Content.swift */,
 				66657D432871D10000B7BDA9 /* ContentCollectionViewCell.swift */,
 				66657D452871D31900B7BDA9 /* ContentCollectionViewHeader.swift */,
+				668F848D2875CB520056D03D /* ContentCollectionViewRankCell.swift */,
+				668F848F2875D2710056D03D /* ContentCollectionViewMainCell.swift */,
 			);
 			path = 14NetflixStyleSampleApp;
 			sourceTree = "<group>";
@@ -219,7 +224,9 @@
 				66657D252871770800B7BDA9 /* AppDelegate.swift in Sources */,
 				66657D462871D31900B7BDA9 /* ContentCollectionViewHeader.swift in Sources */,
 				66657D272871770800B7BDA9 /* SceneDelegate.swift in Sources */,
+				668F848E2875CB520056D03D /* ContentCollectionViewRankCell.swift in Sources */,
 				66657D392871780900B7BDA9 /* HomeViewController.swift in Sources */,
+				668F84902875D2710056D03D /* ContentCollectionViewMainCell.swift in Sources */,
 				66657D4228717D4400B7BDA9 /* Content.swift in Sources */,
 				66657D442871D10000B7BDA9 /* ContentCollectionViewCell.swift in Sources */,
 			);
