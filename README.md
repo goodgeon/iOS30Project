@@ -6,5 +6,4 @@
 <br>
 
 ## 14NetflixStyleSampleApp
-<img src="img/14NetflixStyleSampleApp1.png" width="400">
-<img src="img/14NetflixStyleSampleApp2.png" width="400">
+<img src="img/14NetflixStyleSampleApp1.png" width="300"> <img src="img/14NetflixStyleSampleApp2.png" width="300">
